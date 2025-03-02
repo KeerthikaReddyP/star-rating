@@ -1,12 +1,10 @@
 
-import './App.css'
-
 function App() {
 
   return (
-    <div>
+    <div className="bg-green-700">
       &#9734;
-      <p>Star rating using react and vite</p>
+      <p className="bg-yellow-700">Star rating using react and vite</p>
     </div>
   )
 }
