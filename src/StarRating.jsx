@@ -5,7 +5,7 @@ const StarRating = ({ starCount = 5 }) => {
       <h1 className="text-2xl font-bold absolute top-6">Star rating</h1>
       <div className="flex justify-center items-center text-3xl">
         {new Array(starCount).fill(0).map((a,ind)=>{
-            return <span key={ind}>&#9733;</span>
+            return <span className="text-yellow-400" key={ind}>&#9733;</span>
         })}
       </div>
     </div>
