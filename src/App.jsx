@@ -2,9 +2,9 @@
 function App() {
 
   return (
-    <div className="bg-green-700">
-      &#9734;
-      <p className="bg-yellow-700">Star rating using react and vite</p>
+    <div className="flex flex-col justify-center items-center h-screen relative">
+      <h1 className="text-2xl font-bold absolute top-6">Star rating</h1>
+      <div className="flex justify-center items-center">&#9734;</div>
     </div>
   )
 }
