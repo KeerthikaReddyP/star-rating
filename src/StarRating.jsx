@@ -12,7 +12,7 @@ const StarRating = ({ starCount = 10 }) => {
       <div className="flex justify-center items-center text-3xl">
         {new Array(starCount).fill(0).map((a, ind) => {
           return (
-            <span className="text-yellow-400" key={ind} onClick={()=>setStarValue(ind+1)}>
+            <span className={ind<starValue?"text-yellow-400":""} key={ind} onClick={()=>setStarValue(ind+1)}>
               &#9733;
             </span>
           );
