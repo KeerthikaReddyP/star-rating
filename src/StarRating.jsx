@@ -3,6 +3,7 @@ import { useState } from "react";
 /* eslint-disable react/prop-types */
 const StarRating = ({ starCount = 10 }) => {
   const [starValue, setStarValue] = useState();
+  const [hoverValue, setHovervalue]=useState();
 
   return (
     <div className="flex flex-col justify-center items-center h-screen relative">
@@ -11,9 +12,11 @@ const StarRating = ({ starCount = 10 }) => {
         {new Array(starCount).fill(0).map((a, ind) => {
           return (
             <span
-              className={ind < starValue ? "text-yellow-400" : ""}
+              className={ind < starValue || ind<hoverValue ? "text-yellow-400" : ""}
               key={ind}
               onClick={() => setStarValue(ind + 1)}
+              onMouseEnter={()=>setHovervalue(ind+1)}
+              onMouseLeave={()=>setHovervalue(0)}
             >
               &#9733;
             </span>
